@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pi Auto Deals</title>
+    
+    <!-- Pi Network SDK -->
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+    <script>
+        // Kuanzisha Pi SDK kwa ajili ya Mainnet (sandbox: false)
+        window.addEventListener('load', function() {
+            if (window.Pi) {
+                Pi.init({ version: "2.0", sandbox: false });
+            }
+        });
+    </script>
+
+    <style>
+        /* Kuondoa nafasi za pembeni ili app ijae kwenye skrini nzima */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Link ya app yako kutoka Lovable -->
+    <iframe 
+        src="https://pi-auto-deals.lovable.app" 
+        title="Pi Auto Deals"
+        allow="clipboard-read; clipboard-write; geolocation; camera; microphone"
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
